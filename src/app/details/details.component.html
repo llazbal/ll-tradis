@@ -1,0 +1,10 @@
+<h1>{{ user$.name }}</h1>
+
+<ul *ngIf="user$.address">
+  <li><strong>Username:</strong> {{ user$.username }}</li>
+  <li><strong>Email:</strong> {{ user$.email }}</li>
+  <li><strong>Phone:</strong> {{ user$.phone }}</li>
+  <li><strong>Latitude:</strong> {{ user$.address.geo.lat }}</li>
+  <li><strong>Longitude:</strong> {{ user$.address.geo.lng }}</li>
+  <ll-tradis-map [lat]="user$.address.geo.lat" [lng]="user$.address.geo.lng"></ll-tradis-map>
+</ul>
